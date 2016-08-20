@@ -1,6 +1,6 @@
 goog.provide("Sample");
 
-goog.require("goog.events");
+
 
 /**
  * @export
