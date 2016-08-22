@@ -8,13 +8,15 @@ goog.scope(function() {
      * @constructor
      */
     ispring.project.List = goog.defineClass(null, {
-        constructor: function () {
+        constructor: function (id) {
             
             this.items = [];
             /**
              * @type {String}
              */
-            this.title;
+            this.title = "";
+
+            this.id = id;
 
 
 
@@ -22,7 +24,7 @@ goog.scope(function() {
         
         addItem: function()
         {
-            this.items.push(ispring.project.Item());
+            this.items.push(ispring.project.Item(id));
         },
 
         deleteItem: function()

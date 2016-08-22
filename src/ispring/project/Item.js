@@ -7,7 +7,7 @@ goog.scope(function() {
      * @constructor
      */
     ispring.project.Item = goog.defineClass(null, {
-        constructor: function () {
+        constructor: function (id) {
             /**
              * @type {String}
              */
@@ -17,6 +17,8 @@ goog.scope(function() {
              * @type {Boolean}
              */
             this.checked;
+
+            this.id = id;
 
 
 

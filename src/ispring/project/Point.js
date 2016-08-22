@@ -1,6 +1,7 @@
 goog.provide("ispring.project.Point");
 
 goog.require("ispring.project.List");
+goog.require("goog.getUid");
 
 goog.scope(function() {
 
@@ -11,7 +12,11 @@ goog.scope(function() {
         constructor: function (x, y) {
             this.x = x;
             this.y = y;
-            this.list = new ispring.project.List();
+            
+            this.id = goog.getUid(this);
+            this.list = new ispring.project.List(this.id);
+
+            
 
         
 
