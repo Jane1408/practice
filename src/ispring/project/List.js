@@ -31,7 +31,7 @@ goog.scope(function() {
 
 
 
-            var event = new Event(EventType.POINT_ADDED);
+            var event = new Event(EventType.ITEM_ADDED);
             this.dispatcher.dispatchEvent(event);
         },
 
@@ -43,6 +43,9 @@ goog.scope(function() {
             {
                 this.items[i].num = i;
             }
+
+            var event = new Event(EventType.ITEM_DELETED);
+            this.dispatcher.dispatchEvent(event);
 
 
 
