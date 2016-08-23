@@ -18,12 +18,13 @@ goog.scope(function() {
 
         },
 
-        addPoint: function(x, y)
+        addPoint: function()
         {
+            var point = new ispring.project.Point(event.clientX, event.clientY, this.dispatcher);
 
-            this.points.push(ispring.project.Point(x, y, this.dispatcher));
+            this.points.push(point);
             
-            var event = new Event(EventType.POINT_ADDED);
+            var event = new Event(ispring.project.EventType.POINT_ADDED);
             this.dispatcher.dispatchEvent(event);
 
         },
