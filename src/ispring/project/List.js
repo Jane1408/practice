@@ -8,8 +8,10 @@ goog.scope(function() {
      * @constructor
      */
     ispring.project.List = goog.defineClass(null, {
-        constructor: function (id) {
-            
+        constructor: function (id, dispatcher) {
+
+
+            this.dispatcher = dispatcher;
             this.items = [];
             /**
              * @type {String}
@@ -25,6 +27,9 @@ goog.scope(function() {
         addItem: function()
         {
             this.items.push(ispring.project.Item(id));
+
+            var event = new Event(EventType.POINT_ADDED);
+            this.dispatcher.dispatchEvent(event);
         },
 
         deleteItem: function()

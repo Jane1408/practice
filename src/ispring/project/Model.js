@@ -20,10 +20,11 @@ goog.scope(function() {
 
         addPoint: function(x, y)
         {
+
+            this.points.push(ispring.project.Point(x, y, this.dispatcher));
+            
             var event = new Event(EventType.POINT_ADDED);
             this.dispatcher.dispatchEvent(event);
-
-            this.points.push(ispring.project.Point(x, y));
 
         },
 

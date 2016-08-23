@@ -9,12 +9,15 @@ goog.scope(function() {
      * @constructor
      */
     ispring.project.Point = goog.defineClass(null, {
-        constructor: function (x, y) {
+        constructor: function (x, y, dispatcher) {
+
+            this.dispatcher = dispatcher;
+            
             this.x = x;
             this.y = y;
             
             this.id = goog.getUid(this);
-            this.list = new ispring.project.List(this.id);
+            this.list = new ispring.project.List(this.id, this.dispatcher);
 
             
 
@@ -23,6 +26,12 @@ goog.scope(function() {
 
 
         },
+
+        move: function(x, y)
+        {
+            this.x = x;
+            this.y = y;
+        }
 
 
     });
