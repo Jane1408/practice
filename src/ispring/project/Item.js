@@ -19,6 +19,8 @@ goog.scope(function() {
             this.checked;
 
             this.id = id;
+            
+            this.num;
 
 
 
