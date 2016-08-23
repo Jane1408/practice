@@ -14,9 +14,7 @@ goog.scope(function() {
         constructor: function (dispatcher) {
             this.dispatcher = dispatcher;
             this.points = [];
-            this.addEventListener('point added', function () {
-                this.addPoint(event.clientX, event.clientY);
-            }, false);
+            
 
         },
 
@@ -24,7 +22,6 @@ goog.scope(function() {
         {
             var event = new Event(EventType.POINT_ADDED);
             this.dispatcher.dispatchEvent(event);
-
 
             this.points.push(ispring.project.Point(x, y));
 

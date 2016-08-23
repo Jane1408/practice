@@ -17,6 +17,7 @@ goog.scope(function() {
             this.model = new ispring.project.Model(this.dispatcher);
 
 
+
         },
 
 

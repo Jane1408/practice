@@ -1,7 +1,7 @@
 goog.provide("ispring.project.Point");
 
 goog.require("ispring.project.List");
-goog.require("goog.getUid");
+//goog.require("goog.getUid");
 
 goog.scope(function() {
 
