@@ -16,7 +16,7 @@ goog.scope(function() {
             /**
              * @type {String}
              */
-            this.title = "";
+            this.title = "www";
 
             this.id = id;
 
@@ -26,8 +26,8 @@ goog.scope(function() {
         
         addItem: function()
         {
-            this.items.push(ispring.project.Item(id));
-            this.items[length - 1].num = length - 1
+            this.items.push(new ispring.project.Item(this.id));
+            this.items[this.items.length - 1].num = this.items.length - 1
 
 
 
@@ -51,9 +51,24 @@ goog.scope(function() {
 
         },
 
+        getTitle: function()
+        {
+            return this.title;
+        },
+        getList: function()
+        {
+            return this.items;
+        },
+
+        setTitle: function(title)
+        {
+            this.title = title;
+        },
 
 
-        
+
+
+
 
 
     });

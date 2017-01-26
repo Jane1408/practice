@@ -11,7 +11,7 @@ goog.scope(function() {
             /**
              * @type {String}
              */
-            this.text;
+            this.text = 'dd';
 
             /**
              * @type {Boolean}
@@ -20,11 +20,16 @@ goog.scope(function() {
 
             this.id = id;
             
-            this.num;
+            this.num  =0;;
 
 
 
 
+        },
+
+        getText: function()
+        {
+            return this.text;
         },
 
 

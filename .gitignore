@@ -1,4 +1,3 @@
-node_modules/
-libs/
-scripts/
 .idea/
+*.pyc
+.sass-cache/
